@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript">
+
+function setKey(arg){
+	$.getJSON(arg, function(json) {
+   	console.log(json); // this will show the info it in firebug console
+});
+}
+
+function setNum(arg){
+         document.getElementById('phoneNumber').value = '1234';
+}
+
+
+function setToken(arg){
+	document.getElementById('token').value = 1;
+}
+
+
+
+</script>
+</head>
+
+<body>
+    <form action = "data.html" accept-charset="utf-8" name= "dat" method="post">
+	<div class="field">
+	<h3> Your Wallet Key <br></h3>
+	    <div class="file has-name is-fullwidth">
+            <label class="file-label">
+              <input class="file-input" type="file" name="wa" id="walletFile" />
+
+                <span class="file-label">Choose a file…</span>
+              </span>
+
+              <span class="file-name">...</span>
+            </label>
+            </div>
+	</div>
+
+	<div class="field">
+	<h3> Your phone Number<br></h3>
+	<input type="text" class="input" name="pn" id="phoneNumber" value="00"/>
+	<input type="hidden" class="input" name="to" id="token" value="11"/>
+	</div>
+
+	<button type="submit" class="button">전송</button>
+    </form>
+</body>
